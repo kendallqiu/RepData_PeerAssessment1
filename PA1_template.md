@@ -11,9 +11,9 @@ hist(x=dasum, col="red", breaks=20, xlab="Daily total steps", ylab="Frequency",m
 mean total of steps
 ======================================
 mean(dasum)
-##[1] 10766.19
+#[1] 10766.19
 median(dasum)
-##[1] 10765
+#[1] 10765
 int_avg <- tapply(data_ign$steps, data_ign$interval, mean, na.rm=TRUE, simplify=T)
 data_ia <- data.frame(interval=as.integer(names(int_avg)), avg=int_avg)
 with(data_ia, plot(interval, avg, type="l", xlab="5-minute intervals", ylab="average steps in the interval across all days"))
